@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="lib/css/styles.css?v=contact-button-fix">
+  <link rel="stylesheet" href="lib/css/styles.css?v=home-filter-upgrade">
   <script src="lib/js/properties.js" defer></script>
   <script src="lib/js/script.js" defer></script>
 </head>
@@ -45,6 +45,11 @@
           <div class="search-fields">
             <label class="search-field location-field"><span>Onde você quer morar?</span><span class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg><input id="location-input" type="search" placeholder="Cidade, bairro ou região" autocomplete="off"></span></label>
             <label class="search-field type-field"><span>Tipo de imóvel</span><select id="type-select"><option value="todos">Todos os tipos</option><option value="Casa">Casa</option><option value="Apartamento">Apartamento</option></select></label>
+            <label class="search-field"><span>Dormitórios</span><select id="rooms-select"><option value="0">Qualquer</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
+            <label class="search-field"><span>Banheiros</span><select id="bathrooms-select"><option value="0">Qualquer</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
+            <label class="search-field"><span>Área mínima (m²)</span><input id="area-min-input" type="number" min="0" placeholder="Ex.: 80"></label>
+            <label class="search-field"><span>Área máxima (m²)</span><input id="area-max-input" type="number" min="0" placeholder="Sem limite"></label>
+            <label class="search-field"><span>Preço máximo (R$)</span><input id="price-max-input" type="number" min="0" step="50000" placeholder="Sem limite"></label>
             <button class="search-submit" type="submit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Buscar imóveis</span></button>
           </div>
         </form>
