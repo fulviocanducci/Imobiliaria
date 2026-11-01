@@ -38,6 +38,9 @@
 .catalog-menu-toggle{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.catalog-menu-button{display:none}.catalog-menu-toggle:focus-visible+.catalog-menu-button{outline:2px solid #416f95;outline-offset:3px}.pagination .page-number,.pagination .page-arrow{cursor:pointer}.pagination .page-arrow.is-disabled{cursor:default}.pagination .page-arrow.is-disabled{opacity:.42}
 @media(max-width:680px){.catalog-menu-button{display:flex}.catalog-menu-toggle:checked~.main-nav{display:flex}.catalog-menu-toggle:checked+.catalog-menu-button span:first-child{transform:translateY(6.5px) rotate(45deg)}.catalog-menu-toggle:checked+.catalog-menu-button span:nth-child(2){opacity:0}.catalog-menu-toggle:checked+.catalog-menu-button span:last-child{transform:translateY(-6.5px) rotate(-45deg)}}
 
-#catalog-grid .favorite-button{cursor:default}
+#catalog-grid .favorite-button{z-index:0;cursor:default}
 
 .pagination a.page-arrow.is-disabled{pointer-events:none}
+
+/* Todo o card leva à página do imóvel; controles internos ficam acima do link. */
+.property-card{position:relative}.property-card-link{position:absolute;inset:0;z-index:1;border-radius:inherit}.property-card-link:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.favorite-button{z-index:2}.property-card:hover .property-body h3{color:var(--blue)}.property-card-arrow{display:grid;place-items:center;width:31px;height:31px;border:1px solid #dce4e9;border-radius:50%;color:var(--blue);font-size:15px}
