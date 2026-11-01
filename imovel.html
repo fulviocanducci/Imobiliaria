@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="lib/css/styles.css?v=html-rendered-property-content">
     <script src="lib/js/pages.js" defer></script>
     <script src="lib/js/imovel.js" defer></script>
@@ -38,7 +39,7 @@
           <a href="contato.html">Contato</a>
           <a class="nav-cta" href="contato.html">
             Anuncie seu imóvel&#32;
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
           </a>
         </nav>
       </div>
@@ -60,7 +61,7 @@
                 <span id="detail-tag">Apartamento · À venda</span>
               </span>
               <h1 id="property-title">Apartamento com luz e espaço</h1>
-              <p class="detail-location" id="property-place">⌖ Jardins, São Paulo</p>
+              <p class="detail-location" id="property-place"><i class="bi bi-geo-alt" aria-hidden="true"></i> Jardins, São Paulo</p>
             </div>
             <div class="detail-price">
               <small id="price-label">Valor do imóvel</small>
@@ -73,12 +74,12 @@
               <button class="gallery-image-button" id="gallery-open" type="button" aria-label="Ampliar foto">
                 <img id="gallery-main-image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1500&amp;q=88" alt="Apartamento em Jardins, São Paulo — foto 1">
               </button>
-              <button class="gallery-step gallery-prev" type="button" data-step="-1" aria-label="Foto anterior">‹</button>
-              <button class="gallery-step gallery-next" type="button" data-step="1" aria-label="Próxima foto">›</button>
+              <button class="gallery-step gallery-prev" type="button" data-step="-1" aria-label="Foto anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+              <button class="gallery-step gallery-next" type="button" data-step="1" aria-label="Próxima foto"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
               <span class="gallery-counter" id="gallery-counter">1 / 6</span>
             </div>
             <div class="gallery-rail">
-              <button class="gallery-scroll-button gallery-scroll-up" id="gallery-scroll-up" type="button" aria-label="Rolar fotos para cima" disabled>↑</button>
+              <button class="gallery-scroll-button gallery-scroll-up" id="gallery-scroll-up" type="button" aria-label="Rolar fotos para cima" disabled><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
               <div class="gallery-thumbnails" id="gallery-thumbnails" aria-label="Escolha uma foto do álbum">
                 <button class="gallery-thumb" type="button" data-photo="0" aria-label="Ver foto 1 de 6" aria-current="true">
                   <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=360&amp;q=88" alt="" loading="lazy">
@@ -99,7 +100,7 @@
                   <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=360&amp;q=88" alt="" loading="lazy">
                 </button>
               </div>
-              <button class="gallery-scroll-button gallery-scroll-down" id="gallery-scroll-down" type="button" aria-label="Rolar fotos para baixo" disabled>↓</button>
+              <button class="gallery-scroll-button gallery-scroll-down" id="gallery-scroll-down" type="button" aria-label="Rolar fotos para baixo" disabled><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
             </div>
           </section>
           <div class="detail-layout">
@@ -109,22 +110,22 @@
                 <p id="property-description">Apartamento amplo, com ambientes integrados e boa entrada de luz natural. Uma planta confortável em uma região que combina tranquilidade residencial com conveniência urbana.</p>
                 <div class="detail-highlights" id="detail-highlights">
                   <div>
-                    <span>⌂</span>
+                    <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
                     <strong>142 m²</strong>
                     <small>Área útil</small>
                   </div>
                   <div>
-                    <span>♧</span>
+                    <span><i class="bi bi-door-open" aria-hidden="true"></i></span>
                     <strong>3</strong>
                     <small>Dormitórios</small>
                   </div>
                   <div>
-                    <span>♨</span>
+                    <span><i class="bi bi-droplet" aria-hidden="true"></i></span>
                     <strong>2</strong>
                     <small>Banheiros</small>
                   </div>
                   <div>
-                    <span>▧</span>
+                    <span><i class="bi bi-car-front" aria-hidden="true"></i></span>
                     <strong>2</strong>
                     <small>Vagas</small>
                   </div>
@@ -205,7 +206,7 @@
               <p>Fale com a nossa equipe para tirar dúvidas ou agendar uma visita.</p>
               <a class="detail-contact-button" id="property-contact" href="contato.html?imovel=jardins-apartamento-142">
                 Tenho interesse&#32;
-                <span>↗</span>
+                <span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
               </a>
               <a class="detail-email" href="mailto:oi@horizonteimoveis.com.br">oi@horizonteimoveis.com.br</a>
             </aside>
@@ -216,16 +217,16 @@
           <p>Volte ao catálogo para explorar os imóveis disponíveis.</p>
           <a class="button-outline" href="imoveis.html">
             Ver imóveis&#32;
-            <span>↗</span>
+            <span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
           </a>
         </div>
       </section>
     </main>
     <dialog class="photo-dialog" id="photo-dialog" aria-label="Foto ampliada do imóvel">
       <button class="dialog-close" id="dialog-close" type="button" aria-label="Fechar galeria">×</button>
-      <button class="gallery-step dialog-prev" type="button" data-step="-1" aria-label="Foto anterior">‹</button>
+      <button class="gallery-step dialog-prev" type="button" data-step="-1" aria-label="Foto anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
       <img id="dialog-image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=2000&amp;q=88" alt="Apartamento em Jardins, São Paulo — foto 1">
-      <button class="gallery-step dialog-next" type="button" data-step="1" aria-label="Próxima foto">›</button>
+      <button class="gallery-step dialog-next" type="button" data-step="1" aria-label="Próxima foto"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       <span class="dialog-counter" id="dialog-counter">1 / 6</span>
     </dialog>
     <footer class="site-footer">
@@ -247,27 +248,27 @@
           <h3 class="footer-subtitle">Endereço comercial</h3>
           <address>
             <span class="footer-detail">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.2"></circle></svg>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
               Rua e número
             </span>
             <span class="footer-detail">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V7l9-4 9 4v14M3 11h18M8 7v2m8-2v2M8 15h2m4 0h2M8 21v-3h8v3"></path></svg>
+              <i class="bi bi-buildings" aria-hidden="true"></i>
               Bairro
             </span>
             <span class="footer-detail">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path><path d="M9 9h6m-6 3h6"></path></svg>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
               Cidade/UF · CEP
             </span>
           </address>
           <h3 class="footer-subtitle">Dados cadastrais</h3>
           <div class="footer-legal">
             <span class="footer-detail">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7m-7 4h7"></path></svg>
+              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
               <strong>CNPJ:</strong>
                informar cadastro oficial
             </span>
             <span class="footer-detail">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.3 2 3-.1.8 2.9 2.4 1.8-1 2.8 1 2.8-2.4 1.8-.8 2.9-3-.1-2.3 2-2.3-2-3 .1-.8-2.9-2.4-1.8 1-2.8-1-2.8 2.4-1.8.8-2.9 3 .1L12 3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <i class="bi bi-patch-check" aria-hidden="true"></i>
               <strong>CRECI:</strong>
                informar registro oficial
             </span>
@@ -276,13 +277,13 @@
         <section class="footer-info" aria-labelledby="footer-contact-title">
           <h2 id="footer-contact-title">Fale com a Horizonte</h2>
           <a class="footer-email footer-detail" href="mailto:oi@horizonteimoveis.com.br">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg>
+            <i class="bi bi-envelope" aria-hidden="true"></i>
             oi@horizonteimoveis.com.br
           </a>
           <p>Atendimento em São Paulo e região.</p>
           <a class="footer-contact-link" href="contato.html">
             Entre em contato&#32;
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
           </a>
         </section>
       </div>
@@ -290,7 +291,7 @@
         <span>© 2025 Horizonte Imóveis. Todos os direitos reservados.</span>
         <span>
           Feito com cuidado, em São Paulo&#32;
-          <span class="heart">♥</span>
+          <span class="heart"><i class="bi bi-heart-fill" aria-hidden="true"></i></span>
         </span>
       </div>
     </footer>
