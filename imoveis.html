@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="lib/css/styles.css?v=html-rendered-property-content">
-    <script src="lib/js/imoveis.js" defer></script>
+    <link rel="stylesheet" href="lib/css/styles.css?v=static-listing-page">
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -26,11 +25,12 @@
             <span>imóveis</span>
           </span>
         </a>
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <input class="catalog-menu-toggle" type="checkbox" id="catalog-menu-toggle" aria-label="Alternar menu de navegação">
+        <label class="catalog-menu-button menu-toggle" for="catalog-menu-toggle" aria-controls="main-nav">
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </label>
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
           <a href="imoveis.html">Comprar</a>
           <a href="imoveis.html">Alugar</a>
@@ -64,7 +64,7 @@
       </section>
       <section class="catalog-list section-pad" aria-labelledby="catalog-title">
         <div class="container">
-          <form class="catalog-filters" id="filter-form">
+          <form class="catalog-filters" id="filter-form" method="get">
             <label class="catalog-filter location-filter">
               <span>Localização</span>
               <input id="filter-location" name="location" type="search" placeholder="Cidade ou bairro">
@@ -133,23 +133,23 @@
               </span>
               <h2 id="catalog-title">Todos os imóveis</h2>
             </div>
-            <p class="results-count" id="results-count" aria-live="polite">
+            <p class="results-count" id="results-count">
               Exibindo&#32;
               <strong>1–3</strong>
                de&#32;
               <strong>9 imóveis</strong>
             </p>
           </div>
-          <div class="property-grid catalog-grid" id="catalog-grid" aria-live="polite">
-            <article class="property-card" data-purpose="venda" data-type="Apartamento" data-location="Jardins, São Paulo" data-rooms="3" data-bathrooms="2" data-area="142" data-price="1280000">
+          <div class="property-grid catalog-grid" id="catalog-grid">
+            <article class="property-card">
               <div class="property-photo">
                 <a class="property-image-link" href="imovel.html?id=jardins-apartamento-142" aria-label="Ver detalhes de Apartamento com luz e espaço">
                   <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Apartamento em Jardins, São Paulo" loading="lazy">
                 </a>
                 <span class="property-tag">Destaque</span>
-                <button class="favorite-button" type="button" aria-label="Salvar apartamento em Jardins, São Paulo" aria-pressed="false">
+                <span class="favorite-button" aria-hidden="true">
                   <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
+                </span>
               </div>
               <div class="property-body">
                 <div class="property-location">
@@ -174,15 +174,15 @@
                 </div>
               </div>
             </article>
-            <article class="property-card" data-purpose="venda" data-type="Casa" data-location="Vila Madalena, São Paulo" data-rooms="4" data-bathrooms="3" data-area="218" data-price="1950000">
+            <article class="property-card">
               <div class="property-photo">
                 <a class="property-image-link" href="imovel.html?id=vila-madalena-casa-218" aria-label="Ver detalhes de Casa com jardim para viver leve">
                   <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Casa em Vila Madalena, São Paulo" loading="lazy">
                 </a>
                 <span class="property-tag">Recém-chegado</span>
-                <button class="favorite-button" type="button" aria-label="Salvar casa em Vila Madalena, São Paulo" aria-pressed="false">
+                <span class="favorite-button" aria-hidden="true">
                   <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
+                </span>
               </div>
               <div class="property-body">
                 <div class="property-location">
@@ -207,15 +207,15 @@
                 </div>
               </div>
             </article>
-            <article class="property-card" data-purpose="aluguel" data-type="Apartamento" data-location="Pinheiros, São Paulo" data-rooms="2" data-bathrooms="2" data-area="96" data-price="7400">
+            <article class="property-card">
               <div class="property-photo">
                 <a class="property-image-link" href="imovel.html?id=pinheiros-apartamento-96" aria-label="Ver detalhes de Seu refúgio no coração da cidade">
                   <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Apartamento em Pinheiros, São Paulo" loading="lazy">
                 </a>
                 <span class="property-tag">Para alugar</span>
-                <button class="favorite-button" type="button" aria-label="Salvar apartamento em Pinheiros, São Paulo" aria-pressed="false">
+                <span class="favorite-button" aria-hidden="true">
                   <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
+                </span>
               </div>
               <div class="property-body">
                 <div class="property-location">
@@ -240,220 +240,16 @@
                 </div>
               </div>
             </article>
-            <article class="property-card" data-purpose="venda" data-type="Casa" data-location="Alto de Pinheiros, São Paulo" data-rooms="4" data-bathrooms="4" data-area="260" data-price="2350000" hidden>
-              <div class="property-photo">
-                <a class="property-image-link" href="imovel.html?id=alto-pinheiros-casa-260" aria-label="Ver detalhes de Arquitetura aberta para o jardim">
-                  <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Casa em Alto de Pinheiros, São Paulo" loading="lazy">
-                </a>
-                <span class="property-tag">Destaque</span>
-                <button class="favorite-button" type="button" aria-label="Salvar casa em Alto de Pinheiros, São Paulo" aria-pressed="false">
-                  <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="property-body">
-                <div class="property-location">
-                  <span class="pin"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                   Alto de Pinheiros, São Paulo
-                </div>
-                <h3>
-                  <a class="property-title-link" href="imovel.html?id=alto-pinheiros-casa-260">Arquitetura aberta para o jardim</a>
-                </h3>
-                <div class="property-features">
-                  <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> 260 m²</span>
-                  <span><i class="bi bi-door-open" aria-hidden="true"></i> 4 quartos</span>
-                  <span><i class="bi bi-droplet" aria-hidden="true"></i> 4 banheiros</span>
-                  <span><i class="bi bi-car-front" aria-hidden="true"></i> 3 vagas</span>
-                </div>
-                <div class="property-bottom">
-                  <div>
-                    <small>A partir de</small>
-                    <strong>R$ 2.350.000</strong>
-                  </div>
-                  <a href="imovel.html?id=alto-pinheiros-casa-260" aria-label="Ver detalhes de Arquitetura aberta para o jardim"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-            <article class="property-card" data-purpose="venda" data-type="Apartamento" data-location="Itaim Bibi, São Paulo" data-rooms="3" data-bathrooms="2" data-area="118" data-price="1640000" hidden>
-              <div class="property-photo">
-                <a class="property-image-link" href="imovel.html?id=itaim-bibi-apartamento-118" aria-label="Ver detalhes de Design contemporâneo e varanda">
-                  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Apartamento em Itaim Bibi, São Paulo" loading="lazy">
-                </a>
-                <span class="property-tag">Pronto para morar</span>
-                <button class="favorite-button" type="button" aria-label="Salvar apartamento em Itaim Bibi, São Paulo" aria-pressed="false">
-                  <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="property-body">
-                <div class="property-location">
-                  <span class="pin"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                   Itaim Bibi, São Paulo
-                </div>
-                <h3>
-                  <a class="property-title-link" href="imovel.html?id=itaim-bibi-apartamento-118">Design contemporâneo e varanda</a>
-                </h3>
-                <div class="property-features">
-                  <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> 118 m²</span>
-                  <span><i class="bi bi-door-open" aria-hidden="true"></i> 3 quartos</span>
-                  <span><i class="bi bi-droplet" aria-hidden="true"></i> 2 banheiros</span>
-                  <span><i class="bi bi-car-front" aria-hidden="true"></i> 2 vagas</span>
-                </div>
-                <div class="property-bottom">
-                  <div>
-                    <small>A partir de</small>
-                    <strong>R$ 1.640.000</strong>
-                  </div>
-                  <a href="imovel.html?id=itaim-bibi-apartamento-118" aria-label="Ver detalhes de Design contemporâneo e varanda"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-            <article class="property-card" data-purpose="aluguel" data-type="Casa" data-location="Brooklin, São Paulo" data-rooms="3" data-bathrooms="3" data-area="195" data-price="9800" hidden>
-              <div class="property-photo">
-                <a class="property-image-link" href="imovel.html?id=brooklin-casa-195" aria-label="Ver detalhes de Um refúgio tranquilo na cidade">
-                  <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Casa em Brooklin, São Paulo" loading="lazy">
-                </a>
-                <span class="property-tag">Para alugar</span>
-                <button class="favorite-button" type="button" aria-label="Salvar casa em Brooklin, São Paulo" aria-pressed="false">
-                  <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="property-body">
-                <div class="property-location">
-                  <span class="pin"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                   Brooklin, São Paulo
-                </div>
-                <h3>
-                  <a class="property-title-link" href="imovel.html?id=brooklin-casa-195">Um refúgio tranquilo na cidade</a>
-                </h3>
-                <div class="property-features">
-                  <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> 195 m²</span>
-                  <span><i class="bi bi-door-open" aria-hidden="true"></i> 3 quartos</span>
-                  <span><i class="bi bi-droplet" aria-hidden="true"></i> 3 banheiros</span>
-                  <span><i class="bi bi-car-front" aria-hidden="true"></i> 2 vagas</span>
-                </div>
-                <div class="property-bottom">
-                  <div>
-                    <small>Aluguel mensal</small>
-                    <strong>R$ 9.800 / mês</strong>
-                  </div>
-                  <a href="imovel.html?id=brooklin-casa-195" aria-label="Ver detalhes de Um refúgio tranquilo na cidade"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-            <article class="property-card" data-purpose="venda" data-type="Apartamento" data-location="Moema, São Paulo" data-rooms="3" data-bathrooms="2" data-area="105" data-price="1120000" hidden>
-              <div class="property-photo">
-                <a class="property-image-link" href="imovel.html?id=moema-apartamento-105" aria-label="Ver detalhes de Conforto pertinho do parque">
-                  <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Apartamento em Moema, São Paulo" loading="lazy">
-                </a>
-                <span class="property-tag">Destaque</span>
-                <button class="favorite-button" type="button" aria-label="Salvar apartamento em Moema, São Paulo" aria-pressed="false">
-                  <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="property-body">
-                <div class="property-location">
-                  <span class="pin"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                   Moema, São Paulo
-                </div>
-                <h3>
-                  <a class="property-title-link" href="imovel.html?id=moema-apartamento-105">Conforto pertinho do parque</a>
-                </h3>
-                <div class="property-features">
-                  <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> 105 m²</span>
-                  <span><i class="bi bi-door-open" aria-hidden="true"></i> 3 quartos</span>
-                  <span><i class="bi bi-droplet" aria-hidden="true"></i> 2 banheiros</span>
-                  <span><i class="bi bi-car-front" aria-hidden="true"></i> 2 vagas</span>
-                </div>
-                <div class="property-bottom">
-                  <div>
-                    <small>A partir de</small>
-                    <strong>R$ 1.120.000</strong>
-                  </div>
-                  <a href="imovel.html?id=moema-apartamento-105" aria-label="Ver detalhes de Conforto pertinho do parque"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-            <article class="property-card" data-purpose="venda" data-type="Casa" data-location="Sumaré, São Paulo" data-rooms="4" data-bathrooms="3" data-area="230" data-price="2100000" hidden>
-              <div class="property-photo">
-                <a class="property-image-link" href="imovel.html?id=sumare-casa-230" aria-label="Ver detalhes de Espaço de sobra para a família">
-                  <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Casa em Sumaré, São Paulo" loading="lazy">
-                </a>
-                <span class="property-tag">Recém-chegado</span>
-                <button class="favorite-button" type="button" aria-label="Salvar casa em Sumaré, São Paulo" aria-pressed="false">
-                  <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="property-body">
-                <div class="property-location">
-                  <span class="pin"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                   Sumaré, São Paulo
-                </div>
-                <h3>
-                  <a class="property-title-link" href="imovel.html?id=sumare-casa-230">Espaço de sobra para a família</a>
-                </h3>
-                <div class="property-features">
-                  <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> 230 m²</span>
-                  <span><i class="bi bi-door-open" aria-hidden="true"></i> 4 quartos</span>
-                  <span><i class="bi bi-droplet" aria-hidden="true"></i> 3 banheiros</span>
-                  <span><i class="bi bi-car-front" aria-hidden="true"></i> 2 vagas</span>
-                </div>
-                <div class="property-bottom">
-                  <div>
-                    <small>A partir de</small>
-                    <strong>R$ 2.100.000</strong>
-                  </div>
-                  <a href="imovel.html?id=sumare-casa-230" aria-label="Ver detalhes de Espaço de sobra para a família"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-            <article class="property-card" data-purpose="aluguel" data-type="Apartamento" data-location="Vila Mariana, São Paulo" data-rooms="2" data-bathrooms="1" data-area="82" data-price="6200" hidden>
-              <div class="property-photo">
-                <a class="property-image-link" href="imovel.html?id=vila-mariana-apartamento-82" aria-label="Ver detalhes de Praticidade com um toque de calma">
-                  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Apartamento em Vila Mariana, São Paulo" loading="lazy">
-                </a>
-                <span class="property-tag">Para alugar</span>
-                <button class="favorite-button" type="button" aria-label="Salvar apartamento em Vila Mariana, São Paulo" aria-pressed="false">
-                  <i class="bi bi-heart" aria-hidden="true"></i>
-                </button>
-              </div>
-              <div class="property-body">
-                <div class="property-location">
-                  <span class="pin"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-                   Vila Mariana, São Paulo
-                </div>
-                <h3>
-                  <a class="property-title-link" href="imovel.html?id=vila-mariana-apartamento-82">Praticidade com um toque de calma</a>
-                </h3>
-                <div class="property-features">
-                  <span><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> 82 m²</span>
-                  <span><i class="bi bi-door-open" aria-hidden="true"></i> 2 quartos</span>
-                  <span><i class="bi bi-droplet" aria-hidden="true"></i> 1 banheiros</span>
-                  <span><i class="bi bi-car-front" aria-hidden="true"></i> 1 vagas</span>
-                </div>
-                <div class="property-bottom">
-                  <div>
-                    <small>Aluguel mensal</small>
-                    <strong>R$ 6.200 / mês</strong>
-                  </div>
-                  <a href="imovel.html?id=vila-mariana-apartamento-82" aria-label="Ver detalhes de Praticidade com um toque de calma"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
+
           </div>
-          <p class="no-results" id="no-results" hidden>Nenhum imóvel encontrado com esses filtros. Experimente ampliar sua busca.</p>
-          <nav class="pagination" id="pagination" aria-label="Paginação dos imóveis">
-            <button class="page-arrow" type="button" data-page="0" aria-label="Página anterior" disabled>
-              <i class="bi bi-arrow-left" aria-hidden="true"></i>&#32;
-              <span>Anterior</span>
-            </button>
+          <nav class="pagination" aria-label="Exemplo de paginação dos imóveis">
+            <span class="page-arrow is-disabled" aria-hidden="true"><i class="bi bi-arrow-left"></i> <span>Anterior</span></span>
             <div class="page-numbers">
-              <button class="page-number is-current" type="button" data-page="1" aria-label="Página 1" aria-current="page">1</button>
-              <button class="page-number" type="button" data-page="2" aria-label="Página 2">2</button>
-              <button class="page-number" type="button" data-page="3" aria-label="Página 3">3</button>
+              <span class="page-number is-current" aria-current="page">1</span>
+              <span class="page-number">2</span>
+              <span class="page-number">3</span>
             </div>
-            <button class="page-arrow" type="button" data-page="2" aria-label="Próxima página">
-              <span>Próxima</span>
-               <i class="bi bi-arrow-right" aria-hidden="true"></i>
-            </button>
+            <span class="page-arrow" aria-hidden="true"><span>Próxima</span> <i class="bi bi-arrow-right"></i></span>
           </nav>
           <p class="catalog-footnote">Encontre o espaço que combina com a vida que você quer viver.</p>
         </div>

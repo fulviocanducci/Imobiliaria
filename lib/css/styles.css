@@ -33,3 +33,9 @@
 .property-card[hidden]{display:none!important}
 
 .bi{display:inline-block;line-height:1;vertical-align:-.125em}.property-location .bi{color:#6485a0}.property-bottom>a .bi,.footer-contact-link .bi,.contact-link .bi,.button-outline .bi,.button-light .bi{color:#9fb6c6}.site-footer .heart{color:#d59093}
+
+/* Menu da página de imóveis: navegação responsiva sem JavaScript. */
+.catalog-menu-toggle{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.catalog-menu-button{display:none}.catalog-menu-toggle:focus-visible+.catalog-menu-button{outline:2px solid #416f95;outline-offset:3px}.pagination .page-number,.pagination .page-arrow{cursor:default}.pagination .page-arrow.is-disabled{opacity:.42}
+@media(max-width:680px){.catalog-menu-button{display:flex}.catalog-menu-toggle:checked~.main-nav{display:flex}.catalog-menu-toggle:checked+.catalog-menu-button span:first-child{transform:translateY(6.5px) rotate(45deg)}.catalog-menu-toggle:checked+.catalog-menu-button span:nth-child(2){opacity:0}.catalog-menu-toggle:checked+.catalog-menu-button span:last-child{transform:translateY(-6.5px) rotate(-45deg)}}
+
+#catalog-grid .favorite-button{cursor:default}
