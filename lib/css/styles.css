@@ -39,3 +39,5 @@
 @media(max-width:680px){.catalog-menu-button{display:flex}.catalog-menu-toggle:checked~.main-nav{display:flex}.catalog-menu-toggle:checked+.catalog-menu-button span:first-child{transform:translateY(6.5px) rotate(45deg)}.catalog-menu-toggle:checked+.catalog-menu-button span:nth-child(2){opacity:0}.catalog-menu-toggle:checked+.catalog-menu-button span:last-child{transform:translateY(-6.5px) rotate(-45deg)}}
 
 #catalog-grid .favorite-button{cursor:default}
+
+.pagination a.page-arrow.is-disabled{pointer-events:none}
